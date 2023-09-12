@@ -1,0 +1,17 @@
+﻿@page
+@model ToDoList.Pages.NewModel
+<h1>New Task</h1>
+
+<form method="post">
+    <fieldset>
+        Task Name: 
+        <input asp-for="ToDo.Task"/>
+        <span asp-validation-for="ToDo.Task" class=""></span>
+        <br/>
+        <input type="submit"/>
+    </fieldset>
+</form>
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
